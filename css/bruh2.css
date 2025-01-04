@@ -1,0 +1,854 @@
+/*=============== ABOUT PAGE STYLES ===============*/
+
+/* General Styles */
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Header */
+.header {
+  background-color: transparent; /* Change header background to black */
+}
+
+/*Our Team*/
+.ourteam {
+padding: 4rem 0;
+background-color: black; /* --primary-bg from contact.html */
+color: #ffffff; /* --text-color from contact.html */
+}
+
+.ourteamimage {
+    width: 90%; /* Increased from 550px to 90% of its container */
+    max-width: 1200px; /* Set a max-width to prevent it from becoming too large on wide screens */
+    height: auto; /* Changed from fixed 350px to auto to maintain aspect ratio */
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* If the image is inside this div, ensure it's also centered */
+.ourteamimage img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Founder Section */
+.founder {
+padding: 4rem 0;
+background-color: white; /* --primary-bg from contact.html */
+color: #ffffff; /* --text-color from contact.html */
+}
+
+.founder__container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+
+.founder__left {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.founder__image {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+overflow: hidden;
+margin-bottom: 1.5rem;
+border: 5px solid rgb(30, 41, 59); /* Changed to black */
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adjusted shadow color */
+}
+
+.founder__image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.founder__name {
+font-size: 2rem;
+color: rgb(30, 41, 59); /* --text-color */
+margin-bottom: 0.5rem;
+}
+
+.founder__title {
+font-size: 1.1rem;
+color: #94a3b8; /* --text-muted */
+}
+
+.founder__right {
+flex: 1;
+padding-left: 2rem;
+}
+
+.founder__quote {
+background-color: #1E3A5F; /* Reduced opacity to 0.8 */
+padding: 1.5rem;
+border-radius: 0.5rem;
+font-size: 1.7rem;
+color: #ffffff;
+line-height: 1.6;
+}
+
+/* Removed the ::before pseudo-element that contained the quote symbol */
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+.founder__container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.founder__left {
+  margin-bottom: 2rem;
+}
+
+.founder__right {
+  padding-left: 0;
+  width: 100%;
+}
+
+.founder__quote {
+  text-align: center;
+}
+}
+
+/* Who We Are Section */
+
+.who-we-are {
+position: relative;
+height: 80vh; /* Reduced from 100vh to 80vh */
+background: linear-gradient(rgba(0, 0, 0, 0.745), rgba(0, 0, 0, 0.6)), url(../img/bgimage15.jpg) no-repeat center center/cover;
+background-attachment: fixed;
+padding: 80px 60px; /* Reduced top and bottom padding */
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+color: #fff;
+overflow: hidden; /* Add this line */
+}
+
+/* Add these new rules */
+.who-we-are::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: inherit;
+background-attachment: fixed;
+filter: blur(2px);
+transition: 1s ease-in-out;
+}
+
+.who-we-are.loaded::before {
+opacity: 0;
+}
+
+/* Ensure content is above the background */
+.who-we-are__container {
+position: relative;
+z-index: 1;
+}
+
+.who-we-are__container {
+flex: 1;
+padding: 20px;
+margin: 0 auto;
+margin-top: 2rem; /* Reduced from 5rem */
+max-width: 800px;
+}
+
+.who-we-are__description {
+font-size: 1.5em;
+margin-bottom: 40px;
+line-height: 1.8;
+text-align: center;
+color: #ffffff;
+}
+
+h2 {
+font-size: 2.5em; /* Slightly increased for emphasis */
+text-align: center;
+color: #4ecdc4; /* A teal color that contrasts well with pink and white */
+margin-bottom: 1.5rem; /* Added some space below the title */
+text-transform: uppercase; /* Optional: makes the title stand out more */
+letter-spacing: 2px; /* Optional: adds some spacing between letters */
+}
+
+h3 {
+font-size: 1.8em;
+margin: 15px 0;
+text-align: center;
+color: #ffffff;
+}
+
+p {
+line-height: 1.6;
+font-size: 1.2em;
+margin-bottom: 20px;
+color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.who-we-are {
+  height: auto; /* Allow height to adjust on smaller screens */
+  padding: 60px 20px;
+}
+
+h2 {
+  font-size: 2em; /* Slightly smaller on mobile devices */
+}
+
+.who-we-are__description {
+  font-size: 1.3em;
+}
+}
+
+/* Add this class for the image */
+.who-we-are__image {
+  flex: 1; /* Takes up available space */
+  max-width: 400px; /* Limit max width of the image */
+  margin-left: 20px; /* Space between text and image */
+}
+
+.who-we-are__image img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+p {
+  margin-bottom: 40px; /* Increase space below paragraphs */
+  line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Our Teams Section */
+.our-teams {
+padding: 5rem 0;
+background: linear-gradient(to bottom, #07294c, #001a33);
+}
+
+.our-teams__container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+
+.teams-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+
+.team {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 1rem;
+padding: 1rem;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+}
+
+.team:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team__title {
+font-size: 1.5rem;
+color: var(--title-color);
+margin-bottom: 1.5rem;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.team__content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.team__lead img,
+.team__additional-image img {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 1rem;
+border: 3px solid var(--second-color);
+}
+
+.team__lead-name,
+.team__additional-name {
+font-size: 1rem;
+color: var(--title-color);
+text-align: center;
+margin-top: 0.5rem;
+}
+
+.team__description {
+font-size: 1rem;
+line-height: 1.6;
+color: var(--text-color);
+text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+.teams-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media screen and (max-width: 768px) {
+.teams-grid {
+  grid-template-columns: 1fr;
+}
+
+.team {
+  max-width: 100%;
+}
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.founder,
+.who-we-are,
+.team {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+img {
+display: block;
+max-width: 100%;
+height: auto;
+margin: 0 auto; /* Center all images horizontally */
+}
+
+.team__lead img, 
+.team__additional-image img {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+object-fit: cover;
+margin: 1rem auto; /* Center these images */
+border: 3px solid var(--second-color);
+}
+
+@media (max-width: 768px) {
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin: 0 auto; /* Ensure centering on smaller screens */
+}
+}
+
+@media screen and (max-width: 768px) {
+.team__content {
+  text-align: center;
+}
+}
+
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+.team {
+text-align: center;
+}
+
+body {
+font-family: var(--body-font);
+font-size: var(--normal-font-size);
+font-weight: var(--font-medium);
+color: var(--text-color);
+}
+
+:root {
+--header-height: 3.5rem;
+--first-color: #1E3A5F;
+--first-color-alt: #2C4B7A;
+--second-color: #FF914D;
+--second-color-alt: #FF7A32;
+--title-color: #FFFFFF;
+--text-color: #D9D9D9;
+--body-color: #F0ECE2;
+--body-font: "Montserrat", sans-serif;
+--biggest-font-size: 2rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--font-medium: 500;
+--font-semi-bold: 600;
+--font-bold: 700;
+--z-tooltip: 10;
+--z-fixed: 100;
+}
+
+.who-we-are__description {
+font-size: 1.8em; /* Increase the font size for better readability */
+margin-bottom: 40px; /* Increase space below the description */
+line-height: 1.8; /* Adjust line height for readability */
+text-align: center; /* Center the text */
+color: #ffffff; /* Changed from inherited color to pure white */
+}
+
+h2 {
+font-size: 2em; /* Increase the main heading size */
+text-align: center; /* Center the main heading */
+color: #ffffff; /* Added white color for main heading */
+}
+
+h3 {
+font-size: 1.8em; /* Increase subheading size */
+margin: 15px 0; /* Space above and below subheadings */
+text-align: center; /* Center subheading */
+color: #ffffff; /* Reinforcing white color for subheadings */
+}
+
+p {
+line-height: 1.6; /* Increase line height for better readability */
+font-size: 1.2em; /* Increase paragraph font size */
+margin-bottom: 20px; /* Space below paragraphs */
+color: #ffffff; /* Added white color for paragraphs */
+}
+
+.who-we-are__container {
+flex: 1; /* Takes up available space */
+padding: 20px; /* Padding around the content */
+margin: 0 auto;
+margin-top: 5rem; /* Center the container */
+max-width: 800px; /* Limit the width of the container */
+}
+
+p {
+margin-bottom: 40px; /* Ensure adequate spacing below paragraphs */
+line-height: 1.6; /* Increase line height for readability */
+}
+
+
+.contact__icons {
+color: var(--text-color);
+font-size: 1.5rem;
+padding: 0.5rem;
+}
+
+.contact__icons:hover {
+color: var(--first-color);
+}
+.contact {
+background-color: black;
+color: white;
+padding: 6rem 0 4rem; /* Increased top and bottom padding */
+}
+
+.contact__container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem; /* Increased horizontal padding */
+text-align: center;
+}
+
+.section__title {
+margin-bottom: 2rem; /* Increased margin */
+font-size: 2.5rem; /* Increased font size for emphasis */
+}
+
+.contact__description {
+font-size: 1rem;
+margin-bottom: 3rem; /* Increased margin */
+}
+
+.contact__email {
+margin-bottom: 4rem; /* Increased margin */
+}
+
+.contact__email a {
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+}
+
+.contact__content {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-top: 2rem;
+}
+
+.contact__location,
+.contact__socials {
+flex: 1;
+}
+
+.contact__buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1;
+gap: 1rem;
+}
+
+.contact__button {
+display: inline-block;
+background-color: #f1911c;/* Purple color, you can adjust */
+color: white;
+padding: 1rem 2rem;
+border-radius: 2rem;
+font-weight: var(--font-semi-bold);
+transition: background-color 0.3s;
+text-align: center;
+width: 200px; /* Adjust as needed */
+}
+
+.contact__button:hover {
+background-color: #feb200; /* Lighter purple on hover */
+}
+
+@media screen and (max-width: 768px) {
+.contact__content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__location,
+.contact__socials,
+.contact__buttons {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact {
+  padding-bottom: 6rem; /* Increase bottom padding on mobile */
+}
+}
+
+
+/* Contact Section */
+.contact {
+background-color: black;
+color: white;
+padding: 4rem 0 2rem;
+}
+
+.contact__container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+text-align: center;
+}
+
+.section__title {
+margin-bottom: 3rem;
+font-size: 2.5rem;
+}
+
+.contact__description {
+font-size: 1rem;
+margin-bottom: 3rem;
+}
+
+.contact__email {
+margin-bottom: 4rem;
+}
+
+.contact__email a {
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.contact__email a:hover {
+text-decoration: underline;
+color: var(--text-color);
+}
+
+.contact__content {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-top: 2rem;
+}
+
+.contact__location,
+.contact__socials,
+.contact__buttons {
+flex: 1;
+text-align: center;
+}
+
+.contact__location p,
+.contact__socials a {
+margin-bottom: 0.5rem;
+display: block;
+}
+
+.contact__socials a {
+color: white;
+text-decoration: none;
+}
+
+.contact__socials a:hover {
+text-decoration: underline;
+}
+
+.contact__buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+}
+
+.contact__button {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+background-color: #f1911c;/* Purple color, you can adjust */
+color: white;
+padding: 1rem 2rem;
+border-radius: 2rem;
+font-weight: var(--font-semi-bold);
+transition: background-color 0.3s;
+text-align: center;
+width: 225px;
+text-decoration: none;
+}
+
+.contact__button:hover {
+background-color: #feb200; /* Lighter purple on hover */
+
+}
+
+.wheretofind,
+.socialcontact {
+margin-bottom: 1rem;
+font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+.contact__content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__location,
+.contact__socials,
+.contact__buttons {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+}
+
+/* Ensure the main content area takes up at least the full viewport height */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove any bottom margin or padding from the last section before the footer */
+main > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Adjust the footer styles */
+.footer {
+  flex-shrink: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 0; /* Ensure no top margin on the footer */
+}
+
+/* Ensure sections take up full width */
+.who-we-are,
+.founder,
+.our-team,
+.contact {
+  width: 100%;
+}
+
+/* Adjust spacing for the last section */
+.contact {
+  padding-bottom: 4rem; /* Adjust this value as needed */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact {
+      padding-bottom: 3rem;
+  }
+
+  .footer {
+      padding: 1.5rem 0;
+  }
+}
+
+
+/* Footer Contact Section */
+.contact {
+  background-color: black;
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 3rem;
+}
+
+.wheretofind,
+.mapsite,
+.socialcontact {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.site_map__list {
+  list-style: none;
+  padding: 0;
+}
+
+.site_map__list li {
+  margin-bottom: 10px;
+}
+
+.map_site {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.map_site:hover {
+  color: var(--second-color);
+}
+
+.gtpl-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .contact-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .contact__content {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact__content {
+      grid-template-columns: 1fr;
+  }
+
+  .contact-info-section {
+      padding: 60px 0;
+  }
+
+  .map-container,
+  .map-container iframe {
+      min-height: 350px;
+  }
+
+  .gtpl-heading {
+      font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info-card {
+      padding: 20px;
+  }
+
+  .contact-grid {
+      padding: 0 15px;
+  }
+
+  .gtpl-heading {
+      font-size: 2rem;
+  }
+}
