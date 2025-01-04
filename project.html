@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/project.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <title>Propulsive Landers @ Georgia Tech</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <img src="assets/img/logo.png" alt="GTPL">
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+
+                  <li class="nav__item">
+                     <a href="index.html" class="nav__link">Home</a>
+                  </li>
+                  
+                  <li class="nav__item">
+                     <a href="about.html" class="nav__link">About</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="project.html" class="nav__link">Projects</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="sponsors.html" class="nav__link">Sponsors</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="contact.html" class="nav__link">Contact</a>
+                  </li>
+               </ul>
+
+               <!-- <a href="#" class="nav__button">Login</a> -->
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-apps-2-line"></i>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+<!--==================== LANDING PAGE ====================-->
+<section class="home">
+    <div class="home__container container">
+       <h1 class="home__title">Our Projects</h1>
+       <p class="home__description">Discover the innovative projects we're working on!</p>
+    </div>
+ </section>
+
+ <!--==================== PROJECTS ====================-->
+    <!-- ======= Features Section ======= -->
+    <section class="featuresprojects">
+    <div class="tabs-container">
+       <nav class="tab-nav">
+         <button class="tab-button active" data-tab="RCS">Reaction Control System</button>
+         <button class="tab-button" data-tab="muav">Monoprop UAV</button>
+       </nav>
+       
+       <div class="tab-content">
+         <!-- RCS Content -->
+         <div class="content-panel active" id="RCS">
+           <div class="content-wrapper">
+             <div class="text-content">
+               <h2>Reaction Control System</h2>
+               <p class="description">
+                Reaction Control System (RCS), otherwise known as cold gas thrusters, is often employed in space to achieve precise attitude control when traditional aerodynamic control surfaces are no longer effective. At GTPL, we are currently developing a roll-only RCS system which we will integrate with our thrust vector control (TVC) module to achieve full control over our roll, yaw, and pitch during our vertical take-off, and landing (VTOL) phases.
+               </p>
+               <!-- <ul class="feature-list">
+                 <li>kaboom</li>
+                 <li>pwoosh</li>
+                 <li>boing</li>
+               </ul> -->
+             </div>
+             <div class="image-content">
+               <img src="assets/img/RCS.png" alt="RCS System">
+             </div>
+           </div>
+         </div>
+     
+         <!-- Monoprop UAV Content -->
+         <div class="content-panel" id="muav">
+           <div class="content-wrapper">
+             <div class="text-content">
+               <h2>Monoprop UAV</h2>
+               <p class="description">
+                The Monoprop UAV is an innovative drone that operates with a single set of counter-rotating propellers, unlike conventional quadcopters that rely on four separate rotors. This unique design makes it more compact and efficient, but also introduces complex technical challenges. With fewer propellers, the UAV has less direct control over its movement, particularly roll, requiring advanced thrust vector control (TVC) systems to manage stability and precise maneuvers. 
+                The impact of this project lies in its potential to revolutionize UAV design by offering a more streamlined, adaptable platform. Developing effective control systems for the Monoprop can lead to advancements in drone technology, enabling new applications where space, efficiency, and precise handling are critical.
+               </p>
+               <!-- <ul class="feature-list">
+                 <li>The team competes each year in the Spaceport America Cup.</li>
+                 <li>In the first 3 years, over 10 static fires, 2 hybrid launches, and 5 solid test launches have been conducted.</li>
+                 <li>The training ground for many students to work on the larger and more complex liquid system.</li>
+               </ul> -->
+             </div>
+             <div class="image-content">
+               <img src="assets/img/monoprop.png" alt="Monoprop UAV">
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </section>
+
+<!-- Footer Contact Section -->
+<section class="contact">
+  <div class="contact__container container">
+      <div class="contact__content">
+          <div class="contact__location">
+              <h2 class="wheretofind">Where To Find Us</h2>
+              <p>Georgia Institute of Technology</p>
+              <p>North Avenue</p>
+              <p>Atlanta, GA 30332</p>
+          </div>
+          
+          <div class="site_map">
+              <h2 class="mapsite">Site Map</h2>
+              <ul class="site_map__list">
+                  <li><a href="about.html" class="map_site">About Us</a></li>
+                  <li><a href="projects.html" class="map_site">Projects</a></li>
+                  <li><a href="sponsors.html" class="map_site">Sponsors</a></li>
+                  <li><a href="contact.html" class="map_site">Contact</a></li>
+              </ul>
+          </div>
+
+          <div class="contact__socials">
+              <h2 class="socialcontact">Our Socials</h2>
+              <div class="social__icons">
+                  <a href="mailto:outreach@gtpropulsivelanders.org" class="fa fa-envelope"></a>
+                  <a href="https://www.linkedin.com/company/propulsive-landers-georgia-tech" class="fa fa-linkedin"></a>
+                  <a href="https://www.instagram.com/propulsivelandersgt/" class="fa fa-instagram"></a>
+                  <a href="https://www.tiktok.com/@propulsive.landers.gt" class="social-icon tiktok">
+                      <img src="assets/img/tiktok_round.png" class="tiktok-icon" alt="TikTok">
+                  </a>
+              </div>
+          </div>
+      </div>
+      <h3 class="gtpl-heading">GTPL</h3>
+  </div>
+  <p class="copyright">Copyright 2024 © All rights Reserved. GTPL.</p>
+</section>
+</main>
+
+<!-- Scripts -->
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
