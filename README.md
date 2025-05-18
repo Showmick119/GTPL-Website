@@ -1,2 +1,4 @@
 # GTPL-Website
-A dynamic marketing website for the student organization, Propulsive Landers at Georgia Tech. You can check it out by clicking the following link: https://www.gtpropulsivelanders.org/
+An interactice marketing website for the Registered Student Organization, Propulsive Landers at Georgia Tech. You can check it out by clicking the following link: https://www.gtpropulsivelanders.org/
+
+### Other Contributors: Rayeed Zaman, Mahir Ashraf, Anushka Jain
